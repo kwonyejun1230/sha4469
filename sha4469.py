@@ -1,0 +1,18 @@
+import hashlib
+
+string = input("문자: ")
+encoded_string = string.encode()
+one = hashlib.sha1(encoded_string).hexdigest()
+encoded_string = one.encode()
+two = hashlib.sha224(encoded_string).hexdigest()
+encoded_string = two.encode()
+three = hashlib.sha256(encoded_string).hexdigest()
+encoded_string = three.encode()
+four = hashlib.sha384(encoded_string).hexdigest()
+encoded_string = four.encode()
+five = hashlib.sha512(encoded_string).hexdigest()
+encoded_string = five.encode()
+six = hashlib.sha3_512(encoded_string).hexdigest()
+encoded_string = six.encode()
+result = hashlib.sha3_512(encoded_string).hexdigest()
+print(result)
