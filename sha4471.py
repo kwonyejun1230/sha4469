@@ -5,7 +5,7 @@ from hashlib import pbkdf2_hmac
 # 사용자로부터 입력받기
 string = input("문자: ")
 
-# 소금을 추가하여 보안 강화
+# salt을 추가하여 보안 강화
 salt = os.urandom(16)
 
 # 여러 해시 함수로 순차적으로 해싱하고, PBKDF2 적용
